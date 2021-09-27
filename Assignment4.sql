@@ -1,17 +1,17 @@
---1.
+--1. Views are temporary collections of data created by SELECT statements. They provide a reuseable way to query data
 --2. No. Data can only be retrieved from views
---3. 
-
+--3. created statement that can be executed within multiple queries. useful for streamlining the code base by providing a reuseable query rather than typing out the same query multiple times
+--4. Views create tables to be used in future queries, stored procedures create SELECT statements that can be used in future queries
 --5. usage: stored procedures are used for DML; functions are for calculations
 --   how to call: stored procedures must be called by its name; function called inside SELECT/FROM statement
 --   input: stored procedure may or may not take input, function must have input parameters
 --   output: stored procedures may or may not have output; function must return some values
 --   stored procedures can call functions, but functions cannot call SP
---6.
---7.
+--6. Stored procedures can be made of any type of stored SQL code
+--7. yes you have to call it off of EXEC however so use an AS beforehand
 --8. automatically runs when an event occurs. triggers can work on select/update/delete/insert statements
---9. 
---10. stored procedures have to be called manually, triggers are automatic
+--9. triggers can be used to ensure transaction control by being thrown upon incorrect data input
+--10. stored procedures have to be called manually, triggers are automatic (when criteria is met)
 
 --SQL
 --1a.
@@ -123,6 +123,7 @@ AS
 
 GO
 --12.
+--Incorrect: use EXCEPT instead
 DELETE *
 FROM TableA
 WHERE * IS NOT IN
@@ -131,8 +132,14 @@ WHERE * IS NOT IN
 
 --14.
 CREATE VIEW fullName
+AS
+SELECT [First Name] + ' ' + [Last Name] + ' ' + [Middle Name] AS [Full Name]
+FROM table
 
 --15.
+SELECT TOP Marks
+FROM students
+WHERE Sex = 'F'
 
 --16.
 ORDER BY Sex, Marks
