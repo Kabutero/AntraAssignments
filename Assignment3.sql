@@ -36,6 +36,13 @@ FROM [Order Details] od JOIN Orders o ON od.OrderID = o.OrderID JOIN Customers c
 GROUP BY c.City
 ORDER BY SUM(od.Quantity) DESC
 --5a.
+SELECT DISTINCT City
+FROM Customers
+HAVING COUNT(City) > 1
+UNION
+SELECT DISTINCT CITY
+FROM Customers
+HAVING COUNT(City) > 1
 
 --b.
 SELECT DISTINCT City
