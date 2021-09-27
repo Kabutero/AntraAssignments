@@ -111,3 +111,12 @@ WHERE empid NOT IN(
 )
 
 --13.
+SELECT TOP COUNT(e.deptid), d.deptname
+FROM Employee e JOIN Dept d ON e.deptid = d.deptid
+
+--14.
+SELECT TOP 3 MAX(e.salary), d.deptname, e.empid
+FROM Employee e JOIN Dept d ON e.deptid = d.deptid
+GROUP BY d.deptname, e.empid
+ORDER BY MAX(e.salary) DESC
+
