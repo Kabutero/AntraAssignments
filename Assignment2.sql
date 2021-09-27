@@ -137,11 +137,16 @@ GROUP BY c.CustomerID
 HAVING COUNT(o.OrderID) > 100
 
 --23
+SELECT su.CompanyName AS [Supplier Company Name], sh.CompanyName AS [Shipping Company Name]
+FROM Orders o JOIN Shippers sh ON o.ShipVia = sh.ShipperID JOIN Suppliers su ON su.City = o.ShipCity
 
 --24
-
+SELECT o.OrderDate, p.ProductName
+FROM Orders o JOIN [Order Details] od ON o.OrderID = od.OrderID JOIN Products p ON od.ProductID = p.ProductID
+ORDER BY o.OrderDate ASC
 --25
-
+SELECT e1.FirstName + e1.LastName AS [Employee 1 Name], e2.FirstName + e2.LastName AS [Employee 2 Name], e1.Title
+FROM Employees e1 JOIN Employees e2 ON e1.Title = e2.Title
 --26
 SELECT e1.FirstName, e1.LastName, e1.Title, COUNT(e2.ReportsTo) AS Subordinates
 FROM Employees e1 JOIN Employees e2 ON e1.EmployeeID = e2.ReportsTo
