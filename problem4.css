@@ -1,0 +1,65 @@
+.navmenu {
+    float:none;
+    background-color: rgb(219, 219, 219);
+}
+.navmenulist {
+    align-self:left;
+}
+.navmenulist > li {
+    display:inline-block;
+    padding:10px;
+    margin:0px;
+    background-color: rgb(170, 170, 170);
+}
+.pagebody {
+    display:flex;
+    justify-content:space-between;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.pagebody > h1 {
+    font-size:24px;
+    color:greenyellow;
+}
+.sectionheaders{
+    color:greenyellow;
+}
+.welcomeproductsdiv {
+    float:left;
+    margin-top:10px;
+    margin-left:10px;
+    width:60%;
+}
+.welcome {
+    border:1px solid;
+    padding:10px;
+    border-color:black;
+    margin-bottom:5px;
+}
+.products {
+    border:1px solid;
+    border-color: black;
+    padding:10px;
+    margin-top:5px;
+}
+.newsmessagesdiv {
+    float:right;
+    margin-right:10px;
+    margin-top:10px;
+    width:30%;
+}
+.news {
+    border:1px solid;
+    border-color:black;
+    padding:10px;
+    background-color: rgb(177, 177, 177);
+}
+.messages {
+    border:1px solid;
+    border-color: black;
+    padding:10px;
+    margin-top:5px;
+}

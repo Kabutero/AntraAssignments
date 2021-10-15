@@ -1,0 +1,30 @@
+.footerclass {
+    float:left;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+.linklist {
+    display:block;
+    padding: 10px;
+}
+.addresslist {
+    display:block;
+    padding: 10px;
+}
+.linklist > li {
+    display:block;
+    padding-bottom:15px;
+}
+.addresslist > li {
+    display:block;
+    padding-bottom:5px;
+}
+.copyrightsection {
+    background-color: black;
+    color:blanchedalmond;
+    padding: 30px;
+    vertical-align: middle;
+
+}

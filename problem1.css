@@ -1,0 +1,39 @@
+.headerclass {
+    background-color:rgb(79, 130, 241);
+    height: 15%;
+    color:aliceblue;
+}
+.imagediv {
+    float:left;
+    padding:10px;
+}
+.antraimage {
+    height:20%;
+    width:20%;
+    align-self:left;
+}
+.searchbardiv {
+    float:right;
+    vertical-align: middle;
+    padding-bottom:0px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.searchbar {
+
+    vertical-align: middle;
+}
+.headerlist{
+    padding:10px;
+    text-align:right;
+}
+.headerlist > li {
+    display: inline-block;
+    padding: 10px;
+}
+.topdiv {
+    width:100%;
+}
+.botdiv {
+    width:100%;
+}
